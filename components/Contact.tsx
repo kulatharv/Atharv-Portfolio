@@ -19,7 +19,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-[#0A0A0A] py-24 relative overflow-hidden flex items-center"
+      className="min-h-screen bg-[#0A0A0A] py-12 sm:py-16 md:py-24 relative overflow-hidden flex items-center"
     >
       {/* Background Effects */}
 
@@ -27,7 +27,7 @@ export default function Contact() {
 
       <div className="absolute right-0 bottom-1/3 w-96 h-96 bg-purple-500/10 blur-[140px] rounded-full" />
 
-      <div className="max-w-[1350px] mx-auto px-10 lg:px-14 w-full relative z-10">
+      <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
 
         {/* Heading */}
 
@@ -35,20 +35,20 @@ export default function Contact() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <p className="uppercase tracking-[0.35em] text-blue-500 text-sm mb-4">
+          <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-blue-500 text-xs sm:text-sm mb-4">
             12 · CONTACT
           </p>
 
-          <h2 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
             Let's Build Something
             <span className="text-blue-500">
               {" "}Amazing
             </span>
           </h2>
 
-          <p className="text-zinc-400 mt-6 max-w-3xl mx-auto text-lg">
+          <p className="text-zinc-400 mt-4 sm:mt-6 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg">
             Actively seeking opportunities in Software Development,
             QA Automation, Backend Engineering, and AI-powered systems.
           </p>
@@ -56,11 +56,12 @@ export default function Contact() {
 
         {/* Availability Banner */}
 
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-8 sm:mb-12">
 
           <div
             className="
-            px-6
+            px-4
+            sm:px-6
             py-3
             rounded-full
             bg-green-500/10
@@ -69,7 +70,10 @@ export default function Contact() {
             text-green-400
             flex
             items-center
-            gap-3
+            gap-2
+            sm:gap-3
+            text-sm
+            sm:text-base
           "
           >
             <Briefcase size={18} />
@@ -87,20 +91,20 @@ export default function Contact() {
           border-white/10
           bg-white/5
           backdrop-blur-xl
-          p-10
+          p-4 sm:p-6 lg:p-10
         "
         >
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
 
             {/* Left Side */}
 
             <div>
 
-              <h3 className="text-3xl font-bold mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
                 Contact Information
               </h3>
 
-              <div className="space-y-7">
+              <div className="space-y-5 sm:space-y-7">
 
                 <InfoItem
                   icon={<Mail size={22} />}
@@ -154,25 +158,27 @@ export default function Contact() {
 
             <div>
 
-              <h3 className="text-3xl font-bold mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
                 Connect With Me
               </h3>
 
-              <p className="text-zinc-400 leading-7 mb-8">
+              <p className="text-zinc-400 text-sm sm:text-base leading-7 mb-6 sm:mb-8">
                 Whether it's software engineering, QA automation,
                 research collaborations, internships, or exciting
                 technical opportunities, I'd love to connect.
               </p>
 
-              <div className="flex gap-5 mb-10">
+              <div className="flex gap-4 sm:gap-5 mb-8 sm:mb-10">
 
                 <a
                   href="https://github.com/kulatharv"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                    w-14
-                    h-14
+                    w-12
+                    h-12
+                    sm:w-14
+                    sm:h-14
                     rounded-full
                     border
                     border-white/10
@@ -191,8 +197,10 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                    w-14
-                    h-14
+                    w-12
+                    h-12
+                    sm:w-14
+                    sm:h-14
                     rounded-full
                     border
                     border-white/10
@@ -208,13 +216,15 @@ export default function Contact() {
 
               </div>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
 
                 <a
                   href="/Atharvkulkarni.pdf"
                   className="
-                    px-6
-                    py-4
+                    px-4
+                    sm:px-6
+                    py-3
+                    sm:py-4
                     rounded-xl
                     bg-blue-600
                     hover:bg-blue-700
@@ -231,8 +241,10 @@ export default function Contact() {
                 <a
                   href="mailto:atharvkul02@gmail.com"
                   className="
-                    px-6
-                    py-4
+                    px-4
+                    sm:px-6
+                    py-3
+                    sm:py-4
                     rounded-xl
                     border
                     border-white/10
@@ -256,9 +268,9 @@ export default function Contact() {
 
         {/* Footer */}
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12">
 
-          <p className="text-zinc-500">
+          <p className="text-zinc-500 text-sm sm:text-base">
             © 2026 Atharv Kulkarni · Software Engineer · QA Automation Engineer · Research Enthusiast
           </p>
 
@@ -279,17 +291,17 @@ function InfoItem({
   value: string;
 }) {
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex items-center gap-3 sm:gap-5 min-w-0">
       <div className="text-blue-500">
         {icon}
       </div>
 
-      <div>
+      <div className="min-w-0">
         <p className="text-zinc-500 text-sm">
           {title}
         </p>
 
-        <p className="text-lg font-medium">
+        <p className="text-base sm:text-lg font-medium break-words">
           {value}
         </p>
       </div>

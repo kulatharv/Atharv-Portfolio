@@ -266,36 +266,36 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 bg-[#0A0A0A] relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-24 bg-[#0A0A0A] relative overflow-hidden"
     >
       <div className="absolute left-0 top-1/3 w-96 h-96 bg-indigo-500/10 blur-[150px] rounded-full" />
       <div className="absolute right-0 bottom-1/3 w-96 h-96 bg-purple-500/10 blur-[150px] rounded-full" />
 
-      <div className="max-w-[1350px] mx-auto px-10 lg:px-14 relative z-10">
+      <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <div className="mb-12">
-          <p className="uppercase tracking-[0.35em] text-indigo-400 text-sm mb-4">
+        <div className="mb-8 sm:mb-12">
+          <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-indigo-400 text-xs sm:text-sm mb-4">
             03 · SKILLS
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             Technical <span className="text-indigo-400">Expertise</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 lg:gap-6 mb-8 sm:mb-12">
           <Stat value="40+" label="Technologies" />
           <Stat value="10+" label="Projects" />
           <Stat value="3+" label="Internships" />
           <Stat value="3+" label="Research Paper" />
         </div>
 
-        <div className="flex flex-wrap gap-3 mb-12">
+        <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-12">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2 rounded-full text-sm transition-all duration-300 ${
+              className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm transition-all duration-300 ${
                 activeTab === tab
                   ? "bg-indigo-500 text-white"
                   : "bg-white/5 border border-white/10 text-zinc-400 hover:border-indigo-500/40"
@@ -312,7 +312,7 @@ export default function Skills() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+            className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5 lg:gap-6"
           >
             {displayedSkills.map((skill) => (
               <motion.div
@@ -348,8 +348,8 @@ function Stat({
   label: string;
 }) {
   return (
-    <div className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center">
-      <h3 className="text-3xl font-bold text-indigo-400">
+    <div className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
+      <h3 className="text-2xl sm:text-3xl font-bold text-indigo-400">
         {value}
       </h3>
 

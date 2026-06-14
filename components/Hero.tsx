@@ -4,11 +4,13 @@ import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
       id="home"
-        className="relative min-h-screen flex items-center overflow-hidden pt-24"
+        className="relative min-h-screen flex items-center overflow-hidden pt-24 py-12 sm:py-16 md:py-24"
     >
         {/* Grid Background */}
 
@@ -23,15 +25,24 @@ export default function Hero() {
 
 {/* Blue Orb */}
 
-<div className="absolute top-20 left-20 w-96 h-96 bg-indigo-500/20 blur-[150px] rounded-full" />
-
+{/* <div className="absolute top-20 left-20 w-96 h-96 bg-indigo-500/20 blur-[150px] rounded-full" /> */}
+<div className="absolute top-20 left-0 w-48 h-48 md:w-96 md:h-96 bg-indigo-500/20 blur-[80px] md:blur-[150px] rounded-full" />
 {/* Purple Orb */}
 
-<div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 blur-[150px] rounded-full" />
-      <div className="max-w-7xl mx-auto px-6 w-full">
+{/* <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 blur-[150px] rounded-full" /> */}
+<div className="absolute bottom-20 right-0 w-48 h-48 md:w-96 md:h-96 bg-purple-500/20 blur-[80px] md:blur-[150px] rounded-full" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-
+        {/* <div className="grid lg:grid-cols-2 gap-16 items-center"> */}
+<div
+  className="
+  grid
+  lg:grid-cols-2
+  gap-8
+  lg:gap-16
+  items-center
+"
+>
           {/* LEFT */}
 
           <div>
@@ -40,14 +51,36 @@ export default function Hero() {
               Available for Opportunities
             </span>
 
-            <h1 className="mt-8 text-7xl md:text-8xl font-bold leading-[0.9]   tracking-tight">
+            <h1
+  className="
+  mt-8
+  text-4xl
+  sm:text-5xl
+  md:text-7xl
+  lg:text-8xl
+  font-bold
+  leading-[0.9]
+  tracking-tight
+"
+>
               Atharv
               <br />
               Kulkarni
             </h1>
 
-            <div className="text-blue-500 text-3xl mt-6 font-semibold h-12">
-
+            {/* <div className="text-blue-500 text-3xl mt-6 font-semibold h-12"> */}
+            <div
+  className="
+  text-blue-500
+  text-xl
+  sm:text-2xl
+  md:text-3xl
+   mt-6
+  font-semibold
+  min-h-8
+  sm:min-h-10
+"
+>
               <TypeAnimation
                 sequence={[
                   "Software Engineer",
@@ -64,19 +97,18 @@ export default function Hero() {
 
             </div>
   
-            <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/20 blur-[140px] rounded-full" />
-
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-violet-500/20 blur-[140px] rounded-full" />
-
+            {/* <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/20 blur-[140px] rounded-full" /> */}
+                <div className="absolute top-20 left-0 w-48 h-48 md:w-96 md:h-96 bg-blue-500/20 blur-[80px] md:blur-[140px] rounded-full" />
+<div className="absolute bottom-20 right-0 w-48 h-48 md:w-96 md:h-96 bg-violet-500/20 blur-[80px] md:blur-[140px] rounded-full" />
             
                      
-            <p className="mt-8 text-zinc-400 text-lg max-w-xl leading-8">
+            <p className="mt-8 text-zinc-400 text-base sm:text-lg max-w-xl leading-7 sm:leading-8">
               Building scalable software applications,
               automation frameworks and AI-powered
               solutions that solve real-world problems.
             </p>
 
-            <div className="flex flex-wrap gap-4 mt-10">
+            <div className="flex flex-wrap gap-3 sm:gap-4 mt-8 sm:mt-10">
 
                 <button
   onClick={() => {
@@ -91,7 +123,7 @@ export default function Hero() {
   }}
   className="
     relative z-20
-    px-8 py-4
+    px-6 sm:px-8 py-3 sm:py-4
     rounded-2xl
     bg-gradient-to-r
     from-indigo-500
@@ -110,8 +142,10 @@ export default function Hero() {
   className="
     relative z-50
     inline-block
-    px-8
-    py-4
+    px-6
+    sm:px-8
+    py-3
+    sm:py-4
     rounded-2xl
     border
     border-white/10
@@ -125,7 +159,7 @@ export default function Hero() {
 </a>
             </div>
 
-<div className="flex items-center gap-6 mt-10 text-zinc-400 relative z-50">
+<div className="flex items-center gap-5 sm:gap-6 mt-8 sm:mt-10 text-zinc-400 relative z-50">
   <a
     href="https://github.com/kulatharv"
     target="_blank"
@@ -148,7 +182,10 @@ export default function Hero() {
     />
   </a>
 
-  <a href="mailto:atharvkul02@gmail.com">
+  <a
+  href="mailto:atharvkul02@gmail.com"
+  aria-label="Send Email to Atharv Kulkarni"
+>
     <HiOutlineMail
       size={24}
       className="hover:text-purple-400 transition duration-300 hover:scale-110 cursor-pointer"
@@ -156,7 +193,7 @@ export default function Hero() {
   </a>
 
 </div>
-<div className="flex gap-4 mt-8 text-zinc-500 text-sm flex-wrap relative">
+<div className="flex gap-3 sm:gap-4 mt-6 sm:mt-8 text-zinc-500 text-sm flex-wrap relative">
 
   <a
     href="https://github.com/kulatharv"
@@ -187,7 +224,7 @@ export default function Hero() {
     Email
   </a>
 
-  <span>•</span>
+  <span></span>
 
   <span>Pune, Maharashtra, India</span>
 
@@ -208,7 +245,7 @@ bg-gradient-to-br
 from-white/10
 to-white/5
 backdrop-blur-xl
-p-8
+p-4 sm:p-6 lg:p-8
 shadow-2xl
 ">
                     {/* <FloatingPill
@@ -235,19 +272,43 @@ shadow-2xl
                     text="AI Systems"
                     className="bottom-10 -right-6"
                     /> */}
-              <img
-                src="/profile.png"
-                alt="Atharv"
-                className="
+{/* <Image
+  src="/profile.png"
+  alt="Atharv Kulkarni Profile Photo"
+  width={700}
+  height={800}
+  priority
+  className="
 w-full
-h-[560px]
+h-[350px]
+sm:h-[450px]
+lg:h-[560px]
 object-cover
 rounded-[28px]
 hover:scale-[1.02]
 transition
 duration-500
 "
-              />
+/> */}
+<Image
+  src="/profile.png"
+  alt="Atharv Kulkarni Profile Photo"
+  width={700}
+  height={800}
+  priority
+  className="
+w-full
+h-[320px]
+sm:h-[420px]
+md:h-[500px]
+lg:h-[560px]
+object-cover
+rounded-[28px]
+hover:scale-[1.02]
+transition
+duration-500
+"
+/>
 
               {/* <div className="grid grid-cols-2 gap-4 mt-6">
 

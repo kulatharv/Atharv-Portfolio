@@ -186,28 +186,28 @@ current: false,
 export default function Education() {
 return ( <section
    id="education"
-   className="py-24 bg-[#0A0A0A] relative overflow-hidden"
- > <div className="absolute left-0 top-1/3 w-96 h-96 bg-indigo-500/10 blur-[150px] rounded-full" /> <div className="absolute right-0 bottom-1/3 w-96 h-96 bg-purple-500/10 blur-[150px] rounded-full" />
+   className="py-12 sm:py-16 md:py-24 bg-[#0A0A0A] relative overflow-hidden"
+ > 
 
 
-  <div className="max-w-[1350px] mx-auto px-10 lg:px-14 relative z-10">
+  <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
     {/* Heading */}
 
     <div className="mb-12">
 
-      <p className="uppercase tracking-[0.35em] text-indigo-400 text-sm mb-4">
+      <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-indigo-400 text-xs sm:text-sm mb-4">
         04 · EDUCATION
       </p>
 
-      <h2 className="text-5xl md:text-6xl font-black">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black">
         Academic{" "}
         <span className="text-indigo-400">
           Journey
         </span>
       </h2>
 
-      <p className="text-zinc-400 mt-6 max-w-3xl text-lg">
+      <p className="text-zinc-400 mt-4 md:mt-6 max-w-3xl text-sm sm:text-base lg:text-lg">
         Strong academic foundation in Computer Engineering with
         focus on software development, cloud computing,
         automation, databases, artificial intelligence,
@@ -218,7 +218,7 @@ return ( <section
 
     {/* Academic Stats */}
 
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-10 md:mb-16">
 
       <Stat value="8.71" label="CGPA" />
 
@@ -236,7 +236,7 @@ return ( <section
 
       <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-white/10" />
 
-      <div className="space-y-8">
+      <div className="space-y-5 sm:space-y-8">
 
         {education.map((item, index) => (
 
@@ -256,7 +256,7 @@ return ( <section
             viewport={{
               once: true,
             }}
-            className="relative pl-14"
+            className="relative pl-12 sm:pl-14"
           >
 
             {/* Timeline Dot */}
@@ -266,8 +266,10 @@ return ( <section
               absolute
               left-0
               top-4
-              h-8
-              w-8
+              h-6
+w-6
+sm:h-8
+sm:w-8
               rounded-full
               border-4
               ${
@@ -285,8 +287,9 @@ return ( <section
               bg-white/5
               border
               border-white/10
-              rounded-[24px]
-              p-5
+              rounded-2xl
+p-4
+sm:p-5
               backdrop-blur-xl
               hover:border-indigo-500/40
               transition-all
@@ -317,7 +320,7 @@ return ( <section
                 </div>
               )}
 
-              <h3 className="text-xl font-bold">
+              <h3 className="text-lg sm:text-xl font-bold">
                 {item.title}
               </h3>
 
@@ -329,14 +332,14 @@ return ( <section
                 className="
                 mt-4
                 inline-flex
-                px-3
-                py-1
+                px-2
+py-1
                 rounded-full
                 bg-indigo-500/10
                 border
                 border-indigo-500/20
                 text-indigo-400
-                text-sm
+                text-xs
                 "
               >
                 {item.score}
@@ -346,12 +349,7 @@ return ( <section
                 <div className="flex flex-wrap gap-2 mt-5">
 
                   {[
-                    "DSA",
-                    "DBMS",
-                    "OS",
-                    "CN",
-                    "Cloud",
-                    "AI",
+                    
                   ].map((course) => (
                     <span
                       key={course}
@@ -401,15 +399,15 @@ return ( <div
    bg-white/5
    border
    border-white/10
-   rounded-2xl
-   p-5
+rounded-xl sm:rounded-2xl
+p-3 sm:p-5
    text-center
    backdrop-blur-xl
    hover:border-indigo-500/40
    transition-all
    duration-300
    "
- > <h3 className="text-3xl font-black text-indigo-400">
+ > <h3 className="text-2xl sm:text-3xl font-black text-indigo-400">
 {value} </h3>
 
 

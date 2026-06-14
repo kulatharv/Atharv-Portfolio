@@ -249,7 +249,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen py-12 bg-[#0A0A0A] relative overflow-hidden"
+      className="min-h-screen py-12 sm:py-16 md:py-24 bg-[#0A0A0A] relative overflow-hidden"
     >
       {/* Background Glow */}
 
@@ -257,27 +257,26 @@ export default function About() {
 
       <div className="absolute right-0 bottom-1/3 w-96 h-96 bg-purple-500/10 blur-[150px] rounded-full" />
 
-      <div className="max-w-7xl mx-auto px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Heading */}
 
-        <div className="mb-10">
+        <div className="mb-8 sm:mb-10">
 
-          <p className="uppercase tracking-[0.35em] text-indigo-400 text-sm mb-4">
+          <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-indigo-400 text-xs sm:text-sm mb-4">
             02 · ABOUT ME
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
             Who I <span className="text-indigo-400">Am</span>
           </h2>
 
         </div>
 
-        <div className="grid lg:grid-cols-[1.45fr_0.65fr] gap-6">
-
+<div className="grid lg:grid-cols-[1.45fr_0.65fr] gap-3 sm:gap-5 lg:gap-6">
           {/* LEFT COLUMN */}
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
 
             {/* Professional Summary */}
 
@@ -291,20 +290,20 @@ export default function About() {
               border-white/10
               bg-white/5
               backdrop-blur-xl
-              p-6
+              p-4 sm:p-6
               "
             >
-              <h3 className="text-3xl font-bold mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6">
                 Professional Summary
               </h3>
 
-              <p className="text-zinc-400 leading-8">
+              <p className="text-zinc-400 text-sm sm:text-base leading-7 sm:leading-8">
                 Final-year Computer Engineering student with hands-on
                 experience in Software Development, QA Automation,
                 API Testing, and Backend Engineering.
               </p>
 
-              <p className="text-zinc-400 leading-8 mt-4">
+              <p className="text-zinc-400 text-sm sm:text-base leading-7 sm:leading-8 mt-4">
                 Through internships, projects, research, and leadership
                 initiatives, I have built scalable applications,
                 automation frameworks, and AI-powered solutions while
@@ -312,7 +311,7 @@ export default function About() {
                 quality engineering, and system design.
               </p>
 
-              <p className="text-zinc-400 leading-8 mt-4">
+              <p className="text-zinc-400 text-sm sm:text-base leading-7 sm:leading-8 mt-4">
                 Currently seeking Software Engineer, QA Engineer,
                 SDET, and Backend Developer opportunities.
               </p>
@@ -321,8 +320,7 @@ export default function About() {
 
             {/* Core Strengths */}
 
-            <div className="grid grid-cols-3 gap-6 mt-5">
-
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-6 mt-5">
               <StrengthCard
                 title="Problem Solving"
                 text="Approach challenges analytically and transform complex requirements into practical solutions."
@@ -354,16 +352,16 @@ export default function About() {
             border-white/10
             bg-white/5
             backdrop-blur-xl
-            p-6
+            p-4 sm:p-6
             h-fit
             "
           >
 
-            <h3 className="text-3xl font-bold mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
               What I Bring
             </h3>
 
-            <div className="space-y-5">
+            <div className="space-y-4 sm:space-y-5">
 
               <Feature text="Software Development" />
               <Feature text="QA Automation & Testing" />
@@ -392,14 +390,14 @@ function StrengthCard({
 }) {
   return (
     <motion.div
-      whileHover={{ y: -5 }}
+      whileHover={{ y: -3 }}
       className="
       rounded-[28px]
       border
       border-white/10
       bg-white/5
       backdrop-blur-xl
-      p-6
+      p-4 sm:p-6
       hover:border-indigo-500/40
       transition-all
       duration-300
@@ -407,7 +405,7 @@ function StrengthCard({
     >
       <div className="w-12 h-[3px] bg-gradient-to-r from-indigo-500 to-purple-500 mb-5" />
 
-      <h4 className="text-xl font-semibold mb-3">
+      <h4 className="text-lg sm:text-xl font-semibold mb-3">
         {title}
       </h4>
 
@@ -432,7 +430,7 @@ function Feature({
         className="text-indigo-400 flex-shrink-0"
       />
 
-      <span className="text-zinc-300">
+      <span className="text-zinc-300 text-sm sm:text-base">
         {text}
       </span>
 

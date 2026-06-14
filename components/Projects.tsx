@@ -270,21 +270,21 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-[#0A0A0A] py-24"
+      className="min-h-screen bg-[#0A0A0A] py-12 sm:py-16 md:py-24"
     >
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="mb-16">
-          <p className="uppercase tracking-[0.3em] text-blue-500 text-sm mb-4">
+        <div className="mb-8 sm:mb-12 md:mb-16">
+          <p className="uppercase tracking-[0.2em] sm:tracking-[0.3em] text-blue-500 text-xs sm:text-sm mb-4">
             03 · FEATURED PROJECTS
           </p>
 
-          <h2 className="text-6xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             Featured Projects
           </h2>
         </div>
 
-        <div className="grid gap-6">
+        <div className="grid gap-3 sm:gap-5 lg:gap-6">
 
           {/* Featured Project */}
           {projects
@@ -297,23 +297,23 @@ export default function Projects() {
               >
                 <div className="grid lg:grid-cols-[1.2fr_1fr]">
 
-                  <div className="h-[350px] bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-                    <h3 className="text-4xl font-bold">
+                  <div className="h-[220px] sm:h-[280px] lg:h-[350px] bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center px-4 text-center">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
                       {project.title}
                     </h3>
                   </div>
 
-                  <div className="p-10">
+                  <div className="p-4 sm:p-6 lg:p-10">
 
                     <span className="text-blue-400">
                       {project.category}
                     </span>
 
-                    <h3 className="text-3xl font-bold mt-4">
+                    <h3 className="text-2xl sm:text-3xl font-bold mt-4">
                       {project.title}
                     </h3>
 
-                    <p className="text-zinc-400 mt-4 leading-7">
+                    <p className="text-zinc-400 text-sm sm:text-base mt-4 leading-7">
                       {project.description}
                     </p>
 
@@ -359,7 +359,7 @@ export default function Projects() {
             ))}
 
           {/* Other Projects */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-3 sm:gap-5 lg:gap-6">
 
             {projects
               .filter((p) => !p.featured)
@@ -367,18 +367,18 @@ export default function Projects() {
                 <motion.div
                   key={project.title}
                   whileHover={{ y: -5 }}
-                  className="rounded-[28px] border border-white/10 bg-white/5 p-8"
+                  className="rounded-[28px] border border-white/10 bg-white/5 p-4 sm:p-6 lg:p-8"
                 >
 
                   <span className="text-blue-400 text-sm">
                     {project.category}
                   </span>
 
-                  <h3 className="text-2xl font-bold mt-3">
+                  <h3 className="text-xl sm:text-2xl font-bold mt-3">
                     {project.title}
                   </h3>
 
-                  <p className="text-zinc-400 mt-4 leading-7">
+                  <p className="text-zinc-400 text-sm sm:text-base mt-4 leading-7">
                     {project.description}
                   </p>
 

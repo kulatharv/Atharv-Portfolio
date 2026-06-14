@@ -80,7 +80,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen bg-[#0A0A0A] py-24 relative overflow-hidden"
+      className="min-h-screen bg-[#0A0A0A] py-12 sm:py-16 md:py-24 relative overflow-hidden"
     >
       {/* Background Effects */}
 
@@ -88,23 +88,23 @@ export default function Experience() {
 
       <div className="absolute right-0 bottom-1/3 w-96 h-96 bg-purple-500/10 blur-[140px] rounded-full" />
 
-      <div className="max-w-[1350px] mx-auto px-10 lg:px-14 relative z-10">
+      <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Heading */}
 
-        <div className="mb-16">
-          <p className="uppercase tracking-[0.35em] text-blue-500 text-sm mb-4">
+        <div className="mb-8 sm:mb-12 md:mb-16">
+          <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-blue-500 text-xs sm:text-sm mb-4">
             07 · EXPERIENCE
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             Professional{" "}
             <span className="text-blue-500">
               Experience
             </span>
           </h2>
 
-          <p className="text-zinc-400 mt-6 max-w-3xl text-lg">
+          <p className="text-zinc-400 mt-4 sm:mt-6 max-w-3xl text-sm sm:text-base lg:text-lg">
             Hands-on experience through internships,
             software development projects, analytics,
             and freelance work.
@@ -113,7 +113,7 @@ export default function Experience() {
 
         {/* Stats */}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 lg:gap-6 mb-10 md:mb-14">
 
           <StatCard value="3+" label="Internships" />
 
@@ -129,9 +129,9 @@ export default function Experience() {
 
         <div className="relative">
 
-          <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-white/10" />
+          <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-[2px] bg-white/10" />
 
-          <div className="space-y-8">
+          <div className="space-y-5 sm:space-y-8">
 
             {experiences.map((exp, index) => {
               const Icon = exp.icon;
@@ -153,7 +153,7 @@ export default function Experience() {
                   transition={{
                     delay: index * 0.1,
                   }}
-                  className="relative pl-20"
+                  className="relative pl-12 sm:pl-20"
                 >
                   {/* Timeline Dot */}
 
@@ -162,8 +162,10 @@ export default function Experience() {
                     absolute
                     left-0
                     top-5
-                    w-12
-                    h-12
+                    w-8
+                    h-8
+                    sm:w-12
+                    sm:h-12
                     rounded-full
                     bg-blue-500/10
                     border
@@ -187,21 +189,21 @@ export default function Experience() {
                     border
                     border-white/10
                     rounded-[30px]
-                    p-8
+                    p-4 sm:p-6 lg:p-8
                     backdrop-blur-xl
                     hover:border-blue-500/40
                     transition-all
                     duration-300
                   "
                   >
-                    <div className="flex flex-wrap items-center justify-between gap-4 mb-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 mb-5">
 
                       <div>
-                        <h3 className="text-2xl font-bold">
+                        <h3 className="text-lg sm:text-2xl font-bold">
                           {exp.role}
                         </h3>
 
-                        <p className="text-blue-400 mt-1">
+                        <p className="text-blue-400 text-sm sm:text-base mt-1">
                           {exp.company}
                         </p>
                       </div>
@@ -215,7 +217,7 @@ export default function Experience() {
                         border
                         border-blue-500/20
                         text-blue-400
-                        text-sm
+                        text-xs sm:text-sm
                       "
                       >
                         {exp.duration}
@@ -223,11 +225,11 @@ export default function Experience() {
 
                     </div>
 
-                    <ul className="space-y-3 mb-6">
+                    <ul className="space-y-3 mb-5 sm:mb-6">
                       {exp.description.map((point) => (
                         <li
                           key={point}
-                          className="text-zinc-400 leading-7 flex gap-3"
+                          className="text-zinc-400 text-sm sm:text-base leading-7 flex gap-3"
                         >
                           <span className="text-blue-500 mt-1">
                             •
@@ -248,7 +250,7 @@ export default function Experience() {
                           bg-white/5
                           border
                           border-white/10
-                          text-sm
+                          text-xs sm:text-sm
                           text-zinc-300
                         "
                         >
@@ -283,11 +285,11 @@ function StatCard({
       border
       border-white/10
       rounded-2xl
-      p-5
+      p-4 sm:p-5
       text-center
     "
     >
-      <h3 className="text-3xl font-bold text-blue-500">
+      <h3 className="text-2xl sm:text-3xl font-bold text-blue-500">
         {value}
       </h3>
 

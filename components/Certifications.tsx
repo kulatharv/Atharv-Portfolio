@@ -54,7 +54,7 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="min-h-screen bg-[#0A0A0A] py-24 relative overflow-hidden"
+      className="min-h-screen bg-[#0A0A0A] py-12 sm:py-16 md:py-24 relative overflow-hidden"
     >
       {/* Background Effects */}
 
@@ -62,23 +62,23 @@ export default function Certifications() {
 
       <div className="absolute right-0 bottom-1/3 w-96 h-96 bg-purple-500/10 blur-[140px] rounded-full" />
 
-      <div className="max-w-[1350px] mx-auto px-10 lg:px-14 relative z-10">
+      <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Heading */}
 
-        <div className="mb-16">
-          <p className="uppercase tracking-[0.35em] text-blue-500 text-sm mb-4">
+        <div className="mb-8 sm:mb-12 md:mb-16">
+          <p className="uppercase tracking-[0.2em] sm:tracking-[0.35em] text-blue-500 text-xs sm:text-sm mb-4">
             10 · CERTIFICATIONS
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             Certifications &{" "}
             <span className="text-blue-500">
               Credentials
             </span>
           </h2>
 
-          <p className="text-zinc-400 mt-6 max-w-3xl text-lg">
+          <p className="text-zinc-400 mt-4 sm:mt-6 max-w-3xl text-sm sm:text-base lg:text-lg">
             Industry-recognized certifications across cloud
             computing, artificial intelligence, project management,
             and data analytics.
@@ -87,7 +87,7 @@ export default function Certifications() {
 
         {/* Stats */}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 lg:gap-6 mb-10 md:mb-14">
 
           <StatCard value="20+" label="Certifications" />
 
@@ -101,7 +101,7 @@ export default function Certifications() {
 
         {/* Certification Cards */}
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-5 lg:gap-6">
 
           {certifications.map((cert, index) => {
             const Icon = cert.icon;
@@ -123,7 +123,7 @@ export default function Certifications() {
                   border
                   border-white/10
                   rounded-[30px]
-                  p-8
+                  p-4 sm:p-6 lg:p-8
                   backdrop-blur-xl
                   hover:border-blue-500/40
                   transition-all
@@ -131,8 +131,10 @@ export default function Certifications() {
               >
                 <div
                   className="
-                    w-14
-                    h-14
+                    w-12
+                    h-12
+                    sm:w-14
+                    sm:h-14
                     rounded-2xl
                     bg-blue-500/10
                     border
@@ -140,7 +142,8 @@ export default function Certifications() {
                     flex
                     items-center
                     justify-center
-                    mb-6
+                    mb-4
+                    sm:mb-6
                   "
                 >
                   <Icon
@@ -153,7 +156,7 @@ export default function Certifications() {
                   {cert.category}
                 </span>
 
-                <h3 className="text-xl font-semibold mt-3">
+                <h3 className="text-lg sm:text-xl font-semibold mt-3">
                   {cert.title}
                 </h3>
 
@@ -178,8 +181,8 @@ function StatCard({
   label: string;
 }) {
   return (
-    <div className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center">
-      <h3 className="text-3xl font-bold text-blue-500">
+    <div className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 text-center">
+      <h3 className="text-2xl sm:text-3xl font-bold text-blue-500">
         {value}
       </h3>
 
